@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37DF7D19-88D6-4B97-A87D-C3A923FD42EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CS2D_ModHub</RootNamespace>
+    <AssemblyName>CS2D_ModHub</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>bin\Debug\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants><WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType><Optimize>true</Optimize><OutputPath>bin\Release\</OutputPath><DefineConstants>TRACE</DefineConstants><WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" /><Reference Include="System.Core" /><Reference Include="System.Xaml" /><Reference Include="WindowsBase" /><Reference Include="PresentationCore" /><Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml"><Generator>MSBuild:Compile</Generator><SubType>Designer</SubType></ApplicationDefinition>
+    <Page Include="MainWindow.xaml"><Generator>MSBuild:Compile</Generator><SubType>Designer</SubType></Page>
+    <Page Include="Pages\HomePage.xaml"><Generator>MSBuild:Compile</Generator><SubType>Designer</SubType></Page>
+    <Page Include="Pages\ModPage.xaml"><Generator>MSBuild:Compile</Generator><SubType>Designer</SubType></Page>
+    <Page Include="Pages\ModManPage.xaml"><Generator>MSBuild:Compile</Generator><SubType>Designer</SubType></Page>
+    <Page Include="Pages\OpPage.xaml"><Generator>MSBuild:Compile</Generator><SubType>Designer</SubType></Page>
+    <Page Include="Pages\ComPage.xaml"><Generator>MSBuild:Compile</Generator><SubType>Designer</SubType></Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs"><DependentUpon>App.xaml</DependentUpon></Compile>
+    <Compile Include="MainWindow.xaml.cs"><DependentUpon>MainWindow.xaml</DependentUpon></Compile>
+    <Compile Include="Nav.cs" />
+    <Compile Include="Models\ModItem.cs" />
+    <Compile Include="Models\DemoData.cs" />
+    <Compile Include="Pages\HomePage.xaml.cs"><DependentUpon>HomePage.xaml</DependentUpon></Compile>
+    <Compile Include="Pages\ModPage.xaml.cs"><DependentUpon>ModPage.xaml</DependentUpon></Compile>
+    <Compile Include="Pages\ModManPage.xaml.cs"><DependentUpon>ModManPage.xaml</DependentUpon></Compile>
+    <Compile Include="Pages\OpPage.xaml.cs"><DependentUpon>OpPage.xaml</DependentUpon></Compile>
+    <Compile Include="Pages\ComPage.xaml.cs"><DependentUpon>ComPage.xaml</DependentUpon></Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

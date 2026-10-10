@@ -1,0 +1,7 @@
+<Page x:Class="CS2D_ModHub.Pages.HomePage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="HomePage">
+ <Grid Margin="55,32"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="340"/></Grid.ColumnDefinitions>
+  <StackPanel VerticalAlignment="Center" Margin="10,0,40,0"><TextBlock Text="UNREAL SOFTWARE'S" Foreground="#FFFF00" FontSize="13"/><TextBlock Text="CS2D" Foreground="#FFFF00" FontFamily="Impact" FontSize="92" Margin="-2,-10,0,-20"/><TextBlock Text="MOD REPOSITORY" Foreground="White" FontFamily="Impact" FontSize="38"/><Border Background="#DFDF00" Height="5" Width="160" HorizontalAlignment="Left" Margin="0,19,0,20"/><TextBlock Text="КАТАЛОГ МОДИФИКАЦИЙ CS2D" FontSize="18" Foreground="White" FontWeight="Bold"/>
+        </StackPanel>
+  <Border Grid.Column="1" Background="#141E3D" BorderBrush="#344061" BorderThickness="1" Padding="26" VerticalAlignment="Center"><StackPanel><TextBlock Text="ГЛАВНОЕ МЕНЮ" Style="{StaticResource Heading}" Margin="0,0,0,22"/><Button Content="Репозиторий" Height="56" Click="Mods_Click" Style="{StaticResource AccentButton}"/><Button Content="Настройки" Height="56" Click="Options_Click"/><Button Content="Сообщество" Height="56" Click="Community_Click"/><Button Content="Выйти" Height="56" Click="Exit_Click" Margin="0,8,0,0"/><TextBlock Text="CS2D ModHub  •  демонстрация" Foreground="#7886A4" FontSize="12" HorizontalAlignment="Center" Margin="0,20,0,0"/></StackPanel></Border>
+ </Grid>
+</Page>
